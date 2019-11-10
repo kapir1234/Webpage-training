@@ -1,0 +1,14 @@
+.zdjecia{
+    padding: 10%;
+}
+
+.zdjecia img{
+    width:400px;
+    height:400px;
+    opacity: 0.8;
+}
+
+.zdjecia img:hover{
+    opacity: 0.95;
+    transition: 60ms ease;
+}

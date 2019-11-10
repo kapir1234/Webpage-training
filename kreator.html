@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <link rel="stylesheet" href="CSS/style.css" type="text/css" />
+    <link rel="stylesheet" href="CSS/kreator.css" type="text/css" />
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <title>Kacper Walenkiewicz &trade;</title>
+</head>
+
+<body>
+    <main>
+        <header>
+            <img src="images/logo.png" height="80" alt="logo strony" />
+
+            <menu>
+                <li><a href="index.html">STRONA GŁÓWNA</a></li>
+                <li><a href="galeria.html">GALERIA</a></li>
+                <li><a href="kreator.html">KREATOR</a></li>
+            </menu>
+        </header>
+
+        <section>
+            <h1>Kreator najlepszych tostów</h1>
+            <form action="mailto:kcpr.knp@gmail.com" method="POST">
+                <table>
+
+                    <tr>
+                        <td>Nazwa Tosta:</td>
+                        <td><input id='nazwa' type="text" name="nazwa" required placeholder="np. Michał"
+                                pattern="^[a-zA-ZąćęłńóśżźĄĆĘŁŃÓŚŻŹ ]{2-20}$" title="Należy podać nazwę tosta" /></td>
+                    </tr>
+
+                    <tr>
+                        <td>Rodzaj pieczywa:</td>
+                        <td><select name="Pieczywo" id='pieczywo'>
+                                <option value="pszennego" selected="selected">Pszenne</option>
+                                <option value="razowego">Razowe</option>
+                                <option value="ciemnego">Ciemne</option>
+                            </select></td>
+                    </tr>
+
+                    <tr>
+                        <td>Rodzaj sera:</td>
+                        <td><select name="Ser" id='ser'>
+                                <option value="zoltym" selected="selected">Żółty</option>
+                                <option value="plesniowym">Pleśniowy</option>
+                                <option value="bialym">Biały</option>
+                            </select></td>
+                    </tr>
+
+                    <tr>
+                        <td>Dodatek 1:</td>
+                        <td><input id='dodatek_1' type="text" name="dodatek_1" placeholder="np. cebula"
+                                pattern="^[a-zA-ZąćęłńóśżźĄĆĘŁŃÓŚŻŹ ]{2-20}$" title="Należy podać pierwszy dodatek" />
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>Dodatek 2:</td>
+                        <td><input id='dodatek_2' type="text" name="dodatek_2" placeholder="np. papryka"
+                                pattern="^[a-zA-ZąćęłńóśżźĄĆĘŁŃÓŚŻŹ ]{2-20}$" title="Należy podać drugi dodatek" /></td>
+                    </tr>
+
+                    <tr>
+                        <td>Keczup: </td>
+                        <td class="kropka">
+                            <input class="kropka" type="radio" id = "keczup" name="keczup" value="tak" />Tak
+                            <input class="kropka" type="radio" id = "keczup" name="keczup" value="nie" />Nie
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td colspan="2"><input class="submit" type="submit" id="wyslij" value="Wyślij Tosty!"></td>
+                    </tr>
+
+                </table>
+            </form>
+            <div class="buttons">
+                <table>
+                    <tr>
+                        <td><button onclick="dodajTosta()">Zapisz tosta</button></td>
+                        <td><button onclick="pokazListe()">Pokaż zapisane tosty</button></td>
+                    </tr>
+                </table>
+            </div>
+
+
+            <div id="koszyk">
+                <h2>Zapisane Tosty:</h2>
+            </div>
+            <div id="list"></div>
+        </section>
+
+        <footer>
+            <h4>Kacper Walenkiewicz &copy;</h4>
+        </footer>
+    </main>
+    <script src="JS/funkcje.js"></script>
+</body>
+
+</html>
